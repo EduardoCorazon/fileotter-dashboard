@@ -45,18 +45,18 @@ export default function NavBar() {
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Features
+                    <Link color="foreground" href="/FileServer">
+                        FileServer
                     </Link>
                 </NavbarItem>
-                <NavbarItem isActive>
-                    <Link href="#" aria-current="page" color="secondary">
+                <NavbarItem>
+                    <Link href="/home" aria-current="page" color="secondary">
                         Home
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="#">
-                        How to Use
+                    <Link color="foreground" href="/GroupServer">
+                        GroupServer
                     </Link>
                 </NavbarItem>
             </NavbarContent>

@@ -11,11 +11,8 @@ import FindUserID from "@/components/Functions/GroupServer/FindUserID";
 import CreateNewGroup from "@/components/Functions/GroupServer/CreateNewGroup";
 import AddUserToGroup from "@/components/Functions/GroupServer/AddUserToGroup";
 import ListAllGroupUsers from "@/components/Functions/GroupServer/ListAllGroupUsers";
-import UploadToFileServer from "@/components/Functions/FileServer/UploadToFileServer";
-import ListFilesInGroup from "@/components/Functions/FileServer/ListFilesInGroup";
-import DownloadFileFromServer from "@/components/Functions/FileServer/DownloadFileFromServer";
 
-export const FileOtterHomePage = () => {
+export const GroupServerHomePage = () => {
     {
         const storedTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') : null;
         const [sessionInfo, setSessionInfo] = useState(null);
@@ -62,7 +59,36 @@ export const FileOtterHomePage = () => {
 
                         <Card style={{margin: "50px"}}>
                             <CardBody>
-                                <h1>Welcome to FileOtter! Please choose which server to test above (GroupServer or FileServer)</h1>
+                                <h1>Function 3: Find User ID </h1>
+                                <FindUserID/>
+                            </CardBody>
+                        </Card>
+
+                        <Card style={{margin: "50px"}}>
+                            <CardBody>
+                                <h1>Function 4: Create a new User</h1>
+                                <CreateNewUser/>
+                            </CardBody>
+                        </Card>
+
+                        <Card style={{margin: "50px"}}>
+                            <CardBody>
+                                <h1>Function 5: Create a new Group</h1>
+                                <CreateNewGroup/>
+                            </CardBody>
+                        </Card>
+
+                        <Card style={{margin: "50px"}}>
+                            <CardBody>
+                                <h1>Function 6: Add a user to a Group</h1>
+                                <AddUserToGroup/>
+                            </CardBody>
+                        </Card>
+
+                        <Card style={{margin: "50px"}}>
+                            <CardBody>
+                                <h1>Function 7: List all members of a group</h1>
+                                <ListAllGroupUsers/>
                             </CardBody>
                         </Card>
 

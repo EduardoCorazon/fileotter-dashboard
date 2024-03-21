@@ -6,16 +6,11 @@ import axios from 'axios';
 import NavBar from "@/components/navbar/NavBar";
 import {ThemeProvider} from "next-themes";
 import {Card, CardBody, NextUIProvider, Spinner} from "@nextui-org/react";
-import CreateNewUser from "@/components/Functions/GroupServer/CreateNewUser";
-import FindUserID from "@/components/Functions/GroupServer/FindUserID";
-import CreateNewGroup from "@/components/Functions/GroupServer/CreateNewGroup";
-import AddUserToGroup from "@/components/Functions/GroupServer/AddUserToGroup";
-import ListAllGroupUsers from "@/components/Functions/GroupServer/ListAllGroupUsers";
 import UploadToFileServer from "@/components/Functions/FileServer/UploadToFileServer";
 import ListFilesInGroup from "@/components/Functions/FileServer/ListFilesInGroup";
 import DownloadFileFromServer from "@/components/Functions/FileServer/DownloadFileFromServer";
 
-export const FileOtterHomePage = () => {
+export const FileServerHomePage = () => {
     {
         const storedTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') : null;
         const [sessionInfo, setSessionInfo] = useState(null);
@@ -62,7 +57,22 @@ export const FileOtterHomePage = () => {
 
                         <Card style={{margin: "50px"}}>
                             <CardBody>
-                                <h1>Welcome to FileOtter! Please choose which server to test above (GroupServer or FileServer)</h1>
+                                <h1>Function 3: List all available files in group</h1>
+                                <ListFilesInGroup/>
+                            </CardBody>
+                        </Card>
+
+                        <Card style={{margin: "50px"}}>
+                            <CardBody>
+                                <h1>Function 4: Upload files to group</h1>
+                                <UploadToFileServer/>
+                            </CardBody>
+                        </Card>
+
+                        <Card style={{margin: "50px"}}>
+                            <CardBody>
+                                <h1>Function 5: Download files from a group</h1>
+                                <DownloadFileFromServer/>
                             </CardBody>
                         </Card>
 
